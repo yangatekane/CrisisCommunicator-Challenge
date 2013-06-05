@@ -1,0 +1,26 @@
+production:
+  adapter: mysql
+  database: cds_production
+  username: username
+  password: password
+  encoding: utf8
+
+development: &DEVELOPMENT
+  adapter: mysql
+  database: cds_development
+  username: root
+  password: password
+  encoding: utf8
+
+# test: &TEST
+#   adapter: mysql
+#   database: cds_test
+#   username: root
+#   password: Gargle12
+#   encoding: utf8
+
+test:
+  <<: *DEVELOPMENT
+
+cucumber:
+  <<: *TEST

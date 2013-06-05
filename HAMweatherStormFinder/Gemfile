@@ -1,0 +1,111 @@
+# Disables Rubygems warnings, as otherwise this is totally out of control
+if (defined?(Deprecate))
+  Deprecate.skip = true if Deprecate.respond_to?(:skip)
+elsif (defined?(Gem::Deprecate))
+  Gem::Deprecate.skip = true
+end
+
+source 'https://rubygems.org'
+
+gem "foreman"
+gem "thin"
+gem "mongrel"
+gem "rails", "~> 2"
+gem "devise", "1.0.6"
+gem "paperclip", "~> 2.7"
+gem "will_paginate","2.3.16"
+
+gem "mysql"
+gem "ruby-hmac"
+gem "libxml-ruby"
+gem "timecop"
+gem "nokogiri"
+gem "acts_as_audited"
+gem "uuidtools"
+gem 'addressable'
+gem "searchlogic"
+gem "tzinfo"
+gem "rest-client", "~> 1.6.7"
+gem "httparty"
+gem "simple-navigation", :git => 'git://github.com/andi/simple-navigation.git'
+gem "mime-types"
+gem 'ar-extensions'
+
+gem 'koala'
+gem 'stringex'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'system_timer'
+gem 'shared-mime-info'
+gem 'fastercsv'
+
+# Parsers
+gem "rubyzip2"
+gem "zipruby"
+gem "pdf-reader"
+gem "ruby-mp3info"
+gem "epub", :git => "https://github.com/completelynovel/epub.git"
+gem "rdoc"
+
+# gem "guard"
+# gem "guard-bundler"
+# gem "guard-coffeescript"
+# gem "guard-shell"
+# gem "guard-rspec"
+# gem "guard-cucumber"
+
+gem "workflow"
+gem 'money'
+
+# gem "rack-cache"
+gem "haml", "~> 3"
+gem "hpricot"
+gem "ruby_parser"
+gem "erubis"
+gem "test-unit", "1.2.3"
+
+group :development do
+  # gem "ruby-debug19"
+  gem 'rb-readline'
+  # Optional notification methods depending on OS
+  gem 'rb-inotify', :require => false
+  gem "libnotify",  :require => false
+  # gem 'rb-fsevent', :require => false
+  # gem 'rb-fchange', :require => false
+
+  gem "jammit"
+  gem "compass"
+  gem "sassy-buttons"
+end
+
+=begin
+group :test do
+  gem "cucumber-rails", :require => false
+  gem 'akephalos2', :require => 'akephalos'
+  gem "differ"
+
+  gem "rack-test"
+  gem "cucumber"
+  # gem "simplecov"
+
+  # Blueprints
+  gem "machinist"
+  gem "factory_girl"
+  gem "faker"
+
+  gem "database_cleaner"
+  gem "capybara"
+  gem "treetop"
+
+  gem "rspec", "~> 1.3.1"
+
+  # This pulls in RSpec 1.X for Rails 2.3.X
+  gem "rspec-rails", :git => "https://github.com/dchelimsky/rspec-rails.git"
+
+  gem "pickle"
+  gem "launchy"
+
+  gem "webmock"
+  gem "vcr"
+end
+=end

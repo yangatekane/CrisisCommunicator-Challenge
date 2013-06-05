@@ -1,0 +1,26 @@
+production:
+  adapter: mysql
+  database: crisis_production
+  username: username
+  password: password
+  encoding: utf8
+
+development: &DEVELOPMENT
+  adapter: mysql
+  database: crisis_development
+  username: root
+  password: password
+  encoding: utf8
+
+# test: &TEST
+#   adapter: mysql
+#   database: crisis_test
+#   username: root
+#   password: Gargle12
+#   encoding: utf8
+
+test:
+  <<: *DEVELOPMENT
+
+cucumber:
+  <<: *TEST
